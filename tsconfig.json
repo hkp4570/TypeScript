@@ -6,17 +6,18 @@
       "dom.iterable",
       "esnext"
     ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "module": "esnext",
+    "downlevelIteration": true,   //支持迭代器
+    "allowJs": true,              //是否允许ts文件与js文件进行交互
+    "skipLibCheck": true,         //是否对声明文件进行类型检查
+    "esModuleInterop": true,      //es6模块化与commonjs模块化交互
+    "allowSyntheticDefaultImports": true,  //与上面配置配合使用
+    "strict": true,   //开启所有严格类型检查
+    "forceConsistentCasingInFileNames": true,  //导入文件是否区分大小写
+    "module": "esnext",     //使用最新的模块化标准
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
+    "noEmit": true,   //不生成js文件
     "jsx": "react"
   },
   "include": [
