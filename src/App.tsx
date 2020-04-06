@@ -3,10 +3,28 @@ import React from 'react';
 // import ChessComp from './component/chessComp';
 import GameComp from "./component/gameComp";
 
+import {
+    BrowserRouter as Router,
+    Route,
+    Switch,
+    NavLink
+} from 'react-router-dom';
+
 function App() {
     return (
         <div>
-            <GameComp />
+            <Router>
+                <>
+                    <div >
+                        <NavLink to="/gameComp">三字棋游戏</NavLink>
+                    </div>
+                    <div >
+                        <Switch>
+                            <Route path='/gameComp' exact component={ GameComp }></Route>
+                        </Switch>
+                    </div>
+                </>
+            </Router>
         </div>
     );
 }
