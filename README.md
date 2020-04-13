@@ -1,2 +1,0 @@
-# TypeScript
-typescript lesson demo
