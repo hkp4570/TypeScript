@@ -1,26 +1,19 @@
 {
-  "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "downlevelIteration": true,
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "noEmit": true,
-    "jsx": "react",
-    "isolatedModules": true
+  "compilerOptions": {  //编译选项
+    "target":"es6",    //编译目标代码的版本标准
+    "module": "commonjs",  //配置编译目标使用的模块化标准
+    "lib": ["es2016","dom"],       //需要安装第三方库来添加node环境
+    "outDir": "./dist",     //编译完成输出
+    "strictNullChecks": true,  //更加严格的约束 null 和 undefined 不可以赋值给其他类型
+    "removeComments": true,    //移除注释
+    "noImplicitUseStrict": true,   //编译结果不包含'use strict'
+    "esModuleInterop": true,     //启用es模块化交互非es模块导出
+    "noEmitOnError":true,    //错误时不生成编译结果
+    "moduleResolution":"node",   //设置解析模块的模式
+    "strictPropertyInitialization": true    //更加严格的属性初始化   类中的constructor
+
+
   },
-  "include": [
-    "src"
-  ]
+  "include":["./src"]  //只编译src文件夹下的ts文件
+  // "files":["./src/index.ts"],  //执行要编译的文件，可以是多个
 }
