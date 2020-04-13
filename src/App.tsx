@@ -2,6 +2,7 @@ import React from 'react';
 // import CountComp from './component/CountComp';
 // import ChessComp from './component/chessComp';
 import GameComp from "./component/gameComp";
+import Count from './count/Count';
 
 import {
     BrowserRouter as Router,
@@ -15,12 +16,14 @@ function App() {
         <div>
             <Router>
                 <>
-                    <div >
+                    <div>
                         <NavLink to="/gameComp">三字棋游戏</NavLink>
+                        <NavLink to='/count'>计数</NavLink>
                     </div>
                     <div >
                         <Switch>
-                            <Route path='/gameComp' exact component={ GameComp }></Route>
+                            <Route path='/gameComp' exact component={GameComp}></Route>
+                            <Route path='/count' exact component={Count}></Route>
                         </Switch>
                     </div>
                 </>
